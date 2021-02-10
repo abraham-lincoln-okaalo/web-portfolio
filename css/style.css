@@ -66,6 +66,9 @@ img{
 .outer-shadow{
     box-shadow: var(--outer-shadow);
 }
+.inner-shadow{
+    box-shadow: var(--inner-shadow);
+}
 .hover-in-shadow{
     position: relative;
     z-index: 1;
@@ -156,7 +159,9 @@ navigation menu
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
     overflow-y: auto;
 }
 .nav-menu .close-nav-menu{
@@ -204,6 +209,18 @@ navigation menu
     border-radius: 30px;
     transition: all 0.3s ease;
 }
+.nav-menu ul li a.active{
+    color: var(--skin-color);
+}
 .nav-menu ul li a:after{
     border-radius: 30px;
+}
+.nav-menu .copyright-text{
+    position: absolute;
+    top: 50%;
+    font-size: 15px;
+    color: var(--text-black-600);
+    transform: translateY(-50%) rotate(-90deg);
+    left: -60px;
+
 }
